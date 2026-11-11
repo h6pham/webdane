@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --forest: #244c37;
+    --forest-dark: #173726;
+    --green: #547b55;
+    --sage: #91a98c;
+    --mint: #dce9d9;
+    --cream: #f7f8f0;
+    --white: #ffffff;
+    --text: #26372b;
+    --muted: #788579;
+    --border: #e3e9df;
+    --shadow: 0 12px 35px rgba(35, 69, 47, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   TOPBAR
+===================================== */
+
+.topbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 6%;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--forest);
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.brand-icon {
+    font-size: 24px;
+}
+
+.marketplaces {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marketplaces a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marketplaces img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.marketplaces img:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   MAIN LAYOUT
+===================================== */
+
+.layout {
+    max-width: 1250px;
+    margin: 35px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 275px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 100px;
+}
+
+.profile-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.profile-cover {
+    height: 110px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(36, 76, 55, 0.85),
+            rgba(111, 151, 102, 0.7)
+        ),
+        url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=900')
+        center / cover;
+}
+
+.profile-content {
+    padding: 0 22px 25px;
+    margin-top: -43px;
+}
+
+
+.avatar {
+    width: 88px;
+    height: 88px;
+
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+    border: 5px solid white;
+
+    display: block;
+    flex-shrink: 0;
+
+    background: var(--mint);
+    margin-bottom: 13px;
+}
+
+
+.eyebrow {
+    color: var(--green);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.profile-content h2 {
+    color: var(--forest);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.profile-major {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.profile-description {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.side-nav {
+    background: white;
+    padding: 12px;
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 11px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.nav-link span {
+    font-size: 19px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--mint);
+    color: var(--forest);
+}
+
+.sidebar-stamp {
+    background: #eaf1e5;
+    padding: 20px;
+    border-radius: 17px;
+    text-align: center;
+    color: var(--forest);
+}
+
+.sidebar-stamp span {
+    font-size: 30px;
+}
+
+.sidebar-stamp p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.main-content {
+    min-width: 0;
+}
+
+.hero {
+    min-height: 300px;
+    padding: 40px;
+    border-radius: 23px;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(23, 55, 38, 0.96),
+            rgba(53, 95, 61, 0.88)
+        ),
+        url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1200')
+        center / cover;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.hero-content {
+    max-width: 530px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero .eyebrow {
+    color: #c4dfb7;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero h1 span {
+    color: #b6d6a5;
+    font-style: italic;
+}
+
+.hero-description {
+    color: #e1ebdc;
+    font-size: 13px;
+    max-width: 390px;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+    padding: 12px 19px;
+    background: #dce9d9;
+    color: var(--forest);
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.hero-decoration {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 85px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+
+/* =====================================
+   STATISTICS
+===================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 22px 0;
+}
+
+.stat {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--shadow);
+}
+
+.stat-icon {
+    width: 43px;
+    height: 43px;
+    background: var(--mint);
+    color: var(--forest);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.stat h3 {
+    color: var(--forest);
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+.stat p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+/* =====================================
+   SECTION
+===================================== */
+
+.section {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 22px;
+    box-shadow: var(--shadow);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.profile-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--forest);
+    font-size: 26px;
+}
+
+.section-description {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.archive-label {
+    background: var(--mint);
+    color: var(--forest);
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   SEARCH
+===================================== */
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search {
+    flex: 1;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0 13px;
+}
+
+.search span {
+    color: var(--green);
+    font-size: 23px;
+}
+
+.search input {
+    width: 100%;
+    min-width: 0;
+    height: 43px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.result-count {
+    color: var(--muted);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   NOTES
+===================================== */
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.note-card {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+    transition: 0.2s ease;
+}
+
+.note-card:hover {
+    border-color: var(--sage);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(35, 69, 47, 0.06);
+}
+
+.note-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.course-tag {
+    display: inline-block;
+    background: var(--mint);
+    color: var(--forest);
+    border-radius: 30px;
+    padding: 5px 11px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.note-date {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.note-card h3 {
+    color: var(--forest);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.note-body {
+    color: #667469;
+    font-size: 13px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.note-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 10px;
+}
+
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.empty-state {
+    padding: 45px 20px;
+    text-align: center;
+    border: 1px dashed var(--sage);
+    border-radius: 14px;
+    background: #f9fbf6;
+}
+
+.empty-state span {
+    font-size: 35px;
+}
+
+.empty-state h3 {
+    color: var(--forest);
+    font-family: 'Playfair Display', serif;
+    margin: 10px 0 5px;
+}
+
+.empty-state p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =====================================
+   PROFILE SECTION
+===================================== */
+
+.profile-section p:last-child {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-top: 12px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    .layout {
+        grid-template-columns: 230px 1fr;
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero-decoration {
+        right: 20px;
+        font-size: 60px;
+    }
+
+    .section {
+        padding: 22px;
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media screen and (max-width: 680px) {
+
+    .topbar {
+        min-height: 65px;
+        padding: 12px 17px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .marketplaces {
+        gap: 7px;
+    }
+
+    .marketplaces img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        margin: 20px auto;
+        gap: 18px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .profile-cover {
+        height: 85px;
+    }
+
+    .profile-content {
+        margin-top: -38px;
+    }
+
+    .avatar {
+        width: 78px;
+        height: 78px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .side-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 7px;
+        gap: 4px;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 3px;
+        padding: 9px 4px;
+        font-size: 10px;
+    }
+
+    .nav-link span {
+        font-size: 18px;
+    }
+
+    .sidebar-stamp {
+        display: none;
+    }
+
+    .hero {
+        min-height: 260px;
+        padding: 25px 20px;
+        border-radius: 17px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .hero-decoration {
+        right: 5px;
+        font-size: 38px;
+        opacity: 0.5;
+    }
+
+    .stats {
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .stat {
+        padding: 12px;
+        gap: 9px;
+    }
+
+    .stat-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .stat h3 {
+        font-size: 19px;
+    }
+
+    .stat p {
+        font-size: 9px;
+    }
+
+    .section {
+        padding: 17px;
+        border-radius: 16px;
+        margin-top: 15px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 18px;
+    }
+
+    .section-heading h2,
+    .profile-section h2 {
+        font-size: 23px;
+    }
+
+    .archive-label {
+        font-size: 9px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .search {
+        max-width: none;
+    }
+
+    .result-count {
+        text-align: right;
+    }
+
+    .note-card {
+        padding: 15px;
+    }
+
+    .note-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .note-card h3 {
+        font-size: 15px;
+    }
+
+    .note-body {
+        font-size: 12px;
+    }
+
+    .note-meta {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media screen and (max-width: 360px) {
+
+    .brand {
+        font-size: 14px;
+    }
+
+    .marketplaces img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .layout {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat {
+        padding: 9px;
+    }
+
+    .section {
+        padding: 13px;
+    }
+
+    .note-card {
+        padding: 12px;
+    }
+}
