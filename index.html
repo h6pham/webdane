@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Arsip rangkuman perkuliahan Zidane.">
+
+    <title>Zidane's Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="topbar">
+
+        <a href="#" class="brand">
+            <span class="brand-icon">🌿</span>
+            <span>Zidane's Notes</span>
+        </a>
+
+        <div class="marketplaces">
+
+            <a href="LINK_SHOPEE_KAMU" target="_blank" rel="noopener noreferrer">
+                <img src="assets/shopee-logo.png" alt="Shopee">
+            </a>
+
+            <a href="LINK_TOKOPEDIA_KAMU" target="_blank" rel="noopener noreferrer">
+                <img src="assets/tokped-logo.png" alt="Tokopedia">
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN LAYOUT -->
+    <main class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="profile-card">
+
+                <div class="profile-cover"></div>
+
+                <div class="profile-content">
+
+                    <img
+                        src="images/foto-profil.jpg"
+                        alt="Foto profil Zidane"
+                        class="avatar"
+                        id="profilePhoto"
+                    >
+
+                    <p class="eyebrow">STUDENT PROFILE</p>
+
+                    <h2 id="profileName">Zidane</h2>
+
+                    <p class="profile-major" id="profileMajor">
+                        Cyberpreneurship
+                    </p>
+
+                    <p class="profile-description" id="profileDescription">
+                        Personal archive of my learning journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="side-nav">
+
+                <a href="#home" class="nav-link active">
+                    <span>⌂</span>
+                    Beranda
+                </a>
+
+                <a href="#archive" class="nav-link">
+                    <span>▤</span>
+                    Arsip Rangkuman
+                </a>
+
+                <a href="#profile" class="nav-link">
+                    <span>♧</span>
+                    Profil
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-stamp">
+                <span>✿</span>
+                <p>Grow through knowledge.</p>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+        <section class="main-content">
+
+            <!-- HERO -->
+            <section class="hero" id="home">
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">WELCOME TO MY DIGITAL GARDEN</p>
+
+                    <h1>
+                        Every knowledge<br>
+                        grows into <span>something.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Tempat menyimpan dan membaca rangkuman
+                        perjalanan belajar Zidane.
+                    </p>
+
+                    <a href="#archive" class="hero-button">
+                        Jelajahi Rangkuman
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+                <div class="hero-decoration">
+                    <span>✿</span>
+                    <span>❋</span>
+                    <span>☘</span>
+                </div>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+            <section class="stats">
+
+                <div class="stat">
+                    <span class="stat-icon">📚</span>
+                    <div>
+                        <h3 id="totalNotes">0</h3>
+                        <p>Total Rangkuman</p>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-icon">🌱</span>
+                    <div>
+                        <h3 id="totalMeetings">0</h3>
+                        <p>Pertemuan</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ARCHIVE -->
+            <section class="section" id="archive">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">MY LEARNING COLLECTION</p>
+                        <h2>Arsip Rangkuman</h2>
+                        <p class="section-description">
+                            Kumpulan materi yang telah dipelajari.
+                        </p>
+                    </div>
+
+                    <span class="archive-label">
+                        ✿ Personal Archive
+                    </span>
+
+                </div>
+
+
+                <!-- SEARCH -->
+                <div class="toolbar">
+
+                    <div class="search">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Cari rangkuman..."
+                        >
+
+                    </div>
+
+                    <span class="result-count" id="resultCount">
+                        0 rangkuman
+                    </span>
+
+                </div>
+
+
+                <!-- NOTES LIST -->
+                <div class="notes-list" id="notesList"></div>
+
+            </section>
+
+
+            <!-- PROFILE -->
+            <section class="section profile-section" id="profile">
+
+                <p class="eyebrow">ABOUT THE OWNER</p>
+
+                <h2>Tentang Saya</h2>
+
+                <p id="aboutDescription">
+                    Website ini merupakan arsip pribadi untuk
+                    menyimpan berbagai rangkuman materi perkuliahan.
+                    Semoga setiap catatan menjadi bagian dari
+                    perjalanan untuk terus berkembang.
+                </p>
+
+            </section>
+
+
+            <footer>
+                <p>© <span id="currentYear"></span> Zidane's Notes.</p>
+                <p>Made with nature & knowledge 🌿</p>
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
