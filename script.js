@@ -5,7 +5,7 @@ const profile = {
 
     description: "Personal archive of my learning journey.",
 
-    photo: "assets/foto-zidane.jpg",
+    photo: "assets/foto-zidane.jpeg",
 
     about: `
         Website ini merupakan arsip pribadi untuk
